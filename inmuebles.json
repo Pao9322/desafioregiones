@@ -1,0 +1,183 @@
+[
+    {
+      "model": "regiones1.Inmueble",
+      "pk": 1,
+      "fields": {
+        "nombre": "Casa en Las Condes",
+        "descripcion": "Amplia casa con jardín y piscina.",
+        "m2_construidos": 300.50,
+        "m2_terreno": 500.25,
+        "estacionamientos": 3,
+        "habitaciones": 5,
+        "banos": 4,
+        "direccion": "Calle Principal 123",
+        "comuna": 7,
+        "tipo_inmueble": "casa",
+        "precio_mensual": 1500000.00,
+        "usuario": 2
+      }
+    },
+    {
+      "model": "regiones1.Inmueble",
+      "pk": 2,
+      "fields": {
+        "nombre": "Departamento en Providencia",
+        "descripcion": "Moderno departamento con excelente vista.",
+        "m2_construidos": 80.75,
+        "m2_terreno": 0,
+        "estacionamientos": 1,
+        "habitaciones": 2,
+        "banos": 2,
+        "direccion": "Avenida Principal 456",
+        "comuna": 7,
+        "tipo_inmueble": "departamento",
+        "precio_mensual": 800000.00,
+        "usuario": 4
+      }
+    },
+    {
+      "model": "regiones1.Inmueble",
+      "pk": 3,
+      "fields": {
+        "nombre": "Parcela en Colina",
+        "descripcion": "Hermosa parcela con vista a la montaña.",
+        "m2_construidos": 0,
+        "m2_terreno": 5000.00,
+        "estacionamientos": 10,
+        "habitaciones": 3,
+        "banos": 2,
+        "direccion": "Camino a la Parcela 789",
+        "comuna": 1,
+        "tipo_inmueble": "parcela",
+        "precio_mensual": 1200000.00,
+        "usuario": 6
+      }
+    },
+    {
+      "model": "regiones1.Inmueble",
+      "pk": 4,
+      "fields": {
+        "nombre": "Casa en La Reina",
+        "descripcion": "Acogedora casa con patio trasero.",
+        "m2_construidos": 180.00,
+        "m2_terreno": 250.00,
+        "estacionamientos": 2,
+        "habitaciones": 4,
+        "banos": 3,
+        "direccion": "Calle Secundaria 456",
+        "comuna": 7,
+        "tipo_inmueble": "casa",
+        "precio_mensual": 1000000.00,
+        "usuario": 8
+      }
+    },
+    {
+      "model": "regiones1.Inmueble",
+      "pk": 5,
+      "fields": {
+        "nombre": "Departamento en Las Condes",
+        "descripcion": "Luminoso departamento con terraza.",
+        "m2_construidos": 100.00,
+        "m2_terreno": 0,
+        "estacionamientos": 1,
+        "habitaciones": 3,
+        "banos": 2,
+        "direccion": "Avenida Principal 789",
+        "comuna": 7,
+        "tipo_inmueble": "departamento",
+        "precio_mensual": 950000.00,
+        "usuario": 2
+      }
+    },
+    {
+      "model": "regiones1.Inmueble",
+      "pk": 6,
+      "fields": {
+        "nombre": "Parcela en Lampa",
+        "descripcion": "Gran parcela para eventos con piscina.",
+        "m2_construidos": 0,
+        "m2_terreno": 10000.00,
+        "estacionamientos": 20,
+        "habitaciones": 6,
+        "banos": 4,
+        "direccion": "Camino a la Parcela 234",
+        "comuna": 3,
+        "tipo_inmueble": "parcela",
+        "precio_mensual": 2000000.00,
+        "usuario": 9
+      }
+    },
+    {
+      "model": "regiones1.Inmueble",
+      "pk": 7,
+      "fields": {
+        "nombre": "Casa en Ñuñoa",
+        "descripcion": "Amplia casa con patio y quincho.",
+        "m2_construidos": 220.00,
+        "m2_terreno": 300.00,
+        "estacionamientos": 2,
+        "habitaciones": 5,
+        "banos": 3,
+        "direccion": "Calle Principal 789",
+        "comuna": 7,
+        "tipo_inmueble": "casa",
+        "precio_mensual": 1300000.00,
+        "usuario": 4
+      }
+    },
+    {
+      "model": "regiones1.Inmueble",
+      "pk": 8,
+      "fields": {
+        "nombre": "Departamento en Santiago Centro",
+        "descripcion": "Céntrico departamento completamente amoblado.",
+        "m2_construidos": 60.00,
+        "m2_terreno": 0,
+        "estacionamientos": 0,
+        "habitaciones": 1,
+        "banos": 1,
+        "direccion": "Avenida Principal 321",
+        "comuna": 13,
+        "tipo_inmueble": "departamento",
+        "precio_mensual": 700000.00,
+        "usuario": 1
+      }
+    },
+    {
+      "model": "regiones1.Inmueble",
+      "pk": 9,
+      "fields": {
+        "nombre": "Casa en La Florida",
+        "descripcion": "Acogedora casa con patio y quincho.",
+        "m2_construidos": 150.00,
+        "m2_terreno": 200.00,
+        "estacionamientos": 1,
+        "habitaciones": 3,
+        "banos": 2,
+        "direccion": "Calle Secundaria 789",
+        "comuna": 7,
+        "tipo_inmueble": "casa",
+        "precio_mensual": 900000.00,
+        "usuario": 3
+      }
+    },
+    {
+      "model": "regiones1.Inmueble",
+      "pk": 10,
+      "fields": {
+        "nombre": "Parcela en Buin",
+        "descripcion": "Tranquila parcela con árboles frutales.",
+        "m2_construidos": 0,
+        "m2_terreno": 8000.00,
+        "estacionamientos": 5,
+        "habitaciones": 4,
+        "banos": 3,
+        "direccion": "Camino a la Parcela 567",
+        "comuna": 2,
+        "tipo_inmueble": "parcela",
+        "precio_mensual": 1800000.00,
+        "usuario": 7
+      }
+    }
+  ]
+  

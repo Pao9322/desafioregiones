@@ -2,6 +2,25 @@ from django.db import models
 
 # Create your models here.
 
+class Region(models.Model):
+    nombre = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.nombre
+
+class Comuna(models.Model):
+    nombre = models.CharField(max_length=100)
+    region = models.ForeignKey(Region, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.nombre
+
+class TipoInmueble(models.Model):
+    nombre = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.nombre
+
 class Usuario(models.Model):
     TIPO_CHOICES = (
         ('arrendatario', 'Arrendatario'),
@@ -58,7 +77,7 @@ class Inmueble(models.Model):
     habitaciones = models.IntegerField()
     banos = models.IntegerField()
     direccion = models.CharField(max_length=200)
-    comuna = models.CharField(max_length=100)
+    comuna = models.ForeignKey(Comuna, on_delete=models.CASCADE)
     tipo_inmueble = models.CharField(max_length=50, choices=TIPO_INMUEBLE_CHOICES)
     precio_mensual = models.DecimalField(max_digits=10, decimal_places=2)
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
@@ -76,7 +95,7 @@ class Inmueble(models.Model):
     def listar_inmuebles(cls, comuna):
         return cls.objects.filter(comuna=comuna)
 
-    def actualizar_inmueble(self, nombre, descripcion, m2_construidos, m2_terreno, estacionamientos, habitaciones, banos, direccion, comuna, tipo_inmueble, precio_mensual):
+    def actualizar_inmueble(self, nombre, descripcion, m2_construidos, m2_terreno, estacionamientos, habitaciones, banos, direccion, comuna, tipo_inmueble, precio_mensual, usuario):
         self.nombre = nombre
         self.descripcion = descripcion
         self.m2_construidos = m2_construidos
@@ -88,7 +107,9 @@ class Inmueble(models.Model):
         self.comuna = comuna
         self.tipo_inmueble = tipo_inmueble
         self.precio_mensual = precio_mensual
+        self.usuario = usuario
         self.save()
 
     def borrar_inmueble(self):
         self.delete()
+

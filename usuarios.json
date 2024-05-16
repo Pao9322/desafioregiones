@@ -1,0 +1,133 @@
+[
+    {
+      "model": "regiones1.Usuario",
+      "pk": 1,
+      "fields": {
+        "nombres": "Juan",
+        "apellidos": "Perez",
+        "rut": "12345678-9",
+        "direccion": "Calle 123",
+        "telefono_personal": "+56912345678",
+        "correo_electronico": "juan@example.com",
+        "tipo_usuario": "arrendatario"
+      }
+    },
+    {
+      "model": "regiones1.Usuario",
+      "pk": 2,
+      "fields": {
+        "nombres": "Maria",
+        "apellidos": "Gonzalez",
+        "rut": "98765432-1",
+        "direccion": "Avenida 456",
+        "telefono_personal": "+56987654321",
+        "correo_electronico": "maria@example.com",
+        "tipo_usuario": "arrendador"
+      }
+    },
+    {
+      "model": "regiones1.Usuario",
+      "pk": 3,
+      "fields": {
+        "nombres": "Pedro",
+        "apellidos": "Rodriguez",
+        "rut": "45678901-2",
+        "direccion": "Pasaje 789",
+        "telefono_personal": "+56945678901",
+        "correo_electronico": "pedro@example.com",
+        "tipo_usuario": "arrendatario"
+      }
+    },
+    {
+      "model": "regiones1.Usuario",
+      "pk": 4,
+      "fields": {
+        "nombres": "Ana",
+        "apellidos": "Lopez",
+        "rut": "34567890-1",
+        "direccion": "Callejon 234",
+        "telefono_personal": "+56934567890",
+        "correo_electronico": "ana@example.com",
+        "tipo_usuario": "arrendador"
+      }
+    },
+    {
+      "model": "regiones1.Usuario",
+      "pk": 5,
+      "fields": {
+        "nombres": "Carlos",
+        "apellidos": "Martinez",
+        "rut": "23456789-0",
+        "direccion": "Boulevard 567",
+        "telefono_personal": "+56923456789",
+        "correo_electronico": "carlos@example.com",
+        "tipo_usuario": "arrendatario"
+      }
+    },
+    {
+      "model": "regiones1.Usuario",
+      "pk": 6,
+      "fields": {
+        "nombres": "Laura",
+        "apellidos": "Sanchez",
+        "rut": "67890123-4",
+        "direccion": "Avenida Central 890",
+        "telefono_personal": "+56967890123",
+        "correo_electronico": "laura@example.com",
+        "tipo_usuario": "arrendador"
+      }
+    },
+    {
+      "model": "regiones1.Usuario",
+      "pk": 7,
+      "fields": {
+        "nombres": "Diego",
+        "apellidos": "Hernandez",
+        "rut": "89012345-6",
+        "direccion": "Calle Principal 123",
+        "telefono_personal": "+56989012345",
+        "correo_electronico": "diego@example.com",
+        "tipo_usuario": "arrendatario"
+      }
+    },
+    {
+      "model": "regiones1.Usuario",
+      "pk": 8,
+      "fields": {
+        "nombres": "Camila",
+        "apellidos": "Gomez",
+        "rut": "01234567-8",
+        "direccion": "Avenida Norte 345",
+        "telefono_personal": "+56901234567",
+        "correo_electronico": "camila@example.com",
+        "tipo_usuario": "arrendador"
+      }
+    },
+    {
+      "model": "regiones1.Usuario",
+      "pk": 9,
+      "fields": {
+        "nombres": "Luis",
+        "apellidos": "Fernandez",
+        "rut": "56789012-3",
+        "direccion": "Pasaje Sur 678",
+        "telefono_personal": "+56956789012",
+        "correo_electronico": "luis@example.com",
+        "tipo_usuario": "arrendatario"
+      }
+    },
+    {
+      "model": "regiones1.Usuario",
+      "pk": 10,
+      "fields": {
+        "nombres": "Sofia",
+        "apellidos": "Diaz",
+        "rut": "90123456-7",
+        "direccion": "Calle Este 901",
+        "telefono_personal": "+56990123456",
+        "correo_electronico": "sofia@example.com",
+        "tipo_usuario": "arrendador"
+      }
+    }
+  ]
+  
