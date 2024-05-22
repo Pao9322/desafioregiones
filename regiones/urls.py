@@ -16,7 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from regiones1.views import index, login_view, listar_propiedades, generar_solicitud, registro_view, perfil_view 
+from regiones1.views import index, login_view, listar_propiedades, generar_solicitud, registro_view, perfil_view, editar_datos_personales, listar_regiones, listar_comunas, agregar_inmueble, actualizar_inmueble, borrar_inmueble, ver_inmuebles, listar_inmuebles
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +25,12 @@ urlpatterns = [
     path('login/', login_view, name='login'),  
     path('registro/', registro_view, name='registro'),
     path('perfil/', perfil_view, name='perfil'),
+    path('editar/', editar_datos_personales, name='editar_datos_personales'),
+    path('regiones/', listar_regiones, name='regiones'),
+    path('comunas/<int:region_id>/', listar_comunas, name='comunas'),
+    path('inmuebles/<int:comuna_id>/', listar_inmuebles, name='inmuebles'),
+    path('agregar/', agregar_inmueble, name='agregar_inmueble'),
+    path('actualizar/<int:pk>/', actualizar_inmueble, name='actualizar_inmueble'),
+    path('borrar/<int:pk>/', borrar_inmueble, name='borrar_inmueble'),
+    path('ver/', ver_inmuebles, name='ver_inmuebles'),
 ]

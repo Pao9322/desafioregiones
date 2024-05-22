@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect
-from regiones1.models import Inmueble
+from regiones1.models import Inmueble, Region, Comuna
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
+from .forms import InmuebleForm
 
 def listar_propiedades(request, comuna):
     # Filtrar las propiedades por comuna
@@ -59,3 +60,52 @@ def editar_datos_personales(request):
     else:
         form = UserDataForm(instance=request.user)
     return render(request, 'editar_datos_personales.html', {'form': form})
+
+
+def listar_regiones(request):
+    regiones = Region.objects.all()
+    return render(request, 'inmuebles/regiones.html', {'regiones': regiones})
+
+def listar_comunas(request, region_id):
+    region = get_object_or_404(Region, id=region_id)
+    comunas = region.comuna_set.all()
+    return render(request, 'inmuebles/comunas.html', {'comunas': comunas})
+
+def listar_inmuebles(request, comuna_id):
+    comuna = get_object_or_404(Comuna, id=comuna_id)
+    inmuebles = comuna.inmueble_set.all()
+    return render(request, 'inmuebles/listar_inmuebles.html', {'inmuebles': inmuebles})
+
+def agregar_inmueble(request):
+    if request.method == 'POST':
+        form = InmuebleForm(request.POST)
+        if form.is_valid():
+            inmueble = form.save(commit=False)
+            inmueble.usuario = request.user  # Asignar el usuario actual
+            inmueble.save()
+            return redirect('index')
+    else:
+        form = InmuebleForm()
+    return render(request, 'inmuebles/agregar_inmueble.html', {'form': form})
+
+def actualizar_inmueble(request, pk):
+    inmueble = get_object_or_404(Inmueble, pk=pk, usuario=request.user)
+    if request.method == 'POST':
+        form = InmuebleForm(request.POST, instance=inmueble)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+    else:
+        form = InmuebleForm(instance=inmueble)
+    return render(request, 'inmuebles/actualizar_inmueble.html', {'form': form})
+
+def borrar_inmueble(request, pk):
+    inmueble = get_object_or_404(Inmueble, pk=pk, usuario=request.user)
+    if request.method == 'POST':
+        inmueble.delete()
+        return redirect('index')
+    return render(request, 'inmuebles/borrar_inmueble.html', {'inmueble': inmueble})
+
+def ver_inmuebles(request):
+    inmuebles = Inmueble.objects.all()
+    return render(request, 'inmuebles/ver_inmuebles.html', {'inmuebles': inmuebles})

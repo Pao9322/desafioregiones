@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Actualizar Inmueble</title>
+{% endblock %}
+
+{% block content %}
+    <h2>Actualizar Inmueble</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+    <a href="{% url 'index' %}">Volver a la página principal</a>
+{% endblock %}

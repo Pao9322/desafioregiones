@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Borrar Inmueble</title>
+{% endblock %}
+
+{% block content %}
+    <h2>Borrar Inmueble</h2>
+    <p>¿Estás seguro de que quieres borrar el inmueble "{{ inmueble.nombre }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Sí, borrar</button>
+    </form>
+    <a href="{% url 'index' %}">Volver a la página principal</a>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Inmuebles Disponibles</title>
+{% endblock %}
+{% block content %}
+    <h1>Inmuebles Disponibles</h1>
+    <ul>
+        {% for inmueble in inmuebles %}
+        <li>
+            <h2>{{ inmueble.nombre }}</h2>
+            <p>{{ inmueble.descripcion }}</p>
+            <p>Dirección: {{ inmueble.direccion }}</p>
+            <p>Precio mensual: ${{ inmueble.precio_mensual }}</p>
+            <p>Comuna: {{ inmueble.comuna.nombre }}</p>
+            <p>Tipo: {{ inmueble.get_tipo_inmueble_display }}</p>
+            <p>Habitaciones: {{ inmueble.habitaciones }}</p>
+            <p>Baños: {{ inmueble.banos }}</p>
+            <p>Estacionamientos: {{ inmueble.estacionamientos }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'index' %}">Volver a la página principal</a>
+{% endblock %}
